@@ -13,7 +13,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.world.WorldEvent;
 
-@Mod(modid = "HDSAC", name = "HD Skins and Cloaks", version = "0.2A")
+@Mod(modid = "HDSAC", name = "HD Skins and Cloaks", version = "0.2A", dependencies = "required-after:denLib")
 @NetworkMod(clientSideRequired = false, serverSideRequired = false)
 public class HDSAC {
 

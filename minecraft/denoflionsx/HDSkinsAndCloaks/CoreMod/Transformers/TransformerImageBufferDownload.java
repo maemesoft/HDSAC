@@ -1,21 +1,9 @@
 package denoflionsx.HDSkinsAndCloaks.CoreMod.Transformers;
 
-import codechicken.core.asm.ClassOverrider;
-import codechicken.core.asm.ObfuscationManager;
-import cpw.mods.fml.relauncher.IClassTransformer;
-import denoflionsx.HDSkinsAndCloaks.CoreMod.HDSACCoreMod;
-import denoflionsx.HDSkinsAndCloaks.Interfaces.IHDSACTransformer;
+public class TransformerImageBufferDownload extends TransformerBase{
 
-public class TransformerImageBufferDownload implements IClassTransformer, IHDSACTransformer {
-
-    @Override
-    public byte[] transform(String name, byte[] bytes) {
-        bytes = ClassOverrider.overrideBytes(name, bytes, new ObfuscationManager.ClassMapping(this.getObfClassName()), HDSACCoreMod.location);
-        return bytes;
+    public TransformerImageBufferDownload() {
+        this.setObfName("ayz");
     }
 
-    @Override
-    public String getObfClassName() {
-        return "ayz";
-    }
 }
