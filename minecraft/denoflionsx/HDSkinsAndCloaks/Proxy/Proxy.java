@@ -12,4 +12,8 @@ public class Proxy {
         return false;
     }
     
+    public void printMappings(){
+        
+    }
+    
 }

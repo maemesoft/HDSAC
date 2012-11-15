@@ -1,7 +1,12 @@
 package denoflionsx.HDSkinsAndCloaks.Proxy;
 
+import denoflionsx.HDSkinsAndCloaks.HDSAC;
 import java.io.File;
 import net.minecraft.client.Minecraft;
+import net.minecraft.src.EntityOtherPlayerMP;
+import net.minecraft.src.EntityPlayerSP;
+import net.minecraft.src.ImageBufferDownload;
+import net.minecraft.src.TileEntitySkullRenderer;
 
 public class ProxyClient extends Proxy{
 
@@ -14,4 +19,13 @@ public class ProxyClient extends Proxy{
     public boolean isClient() {
         return true;
     }
+
+    @Override
+    public void printMappings() {
+        HDSAC.Core.print("EntityPlayerSP Mapping: " + EntityPlayerSP.class.getName());
+        HDSAC.Core.print("EntityOtherPlayerMP Mapping: " + EntityOtherPlayerMP.class.getName());
+        HDSAC.Core.print("TileEntitySkullRenderer Mapping: " + TileEntitySkullRenderer.class.getName());
+        HDSAC.Core.print("ImageBufferDownload Mapping: " + ImageBufferDownload.class.getName());
+    }
+
 }
