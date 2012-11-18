@@ -10,6 +10,7 @@ public class EntityPlayerSP extends EntityPlayer
 {
     public MovementInput movementInput;
     protected Minecraft mc;
+    private static final String identifier = "This is EntityPlayerSP";
 
     /**
      * Used to tell if the player pressed forward twice. If this is at 0 and it's pressed (And they are allowed to

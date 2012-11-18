@@ -27,12 +27,12 @@ public class HDSAC {
     public static boolean setup = false;
 
     public HDSAC() {
-        instance = this;
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Mod.PreInit
     public void preload(FMLPreInitializationEvent evt) {
+        instance = this;
+        MinecraftForge.EVENT_BUS.register(this);
         Core = new HDSACCore();
     }
 

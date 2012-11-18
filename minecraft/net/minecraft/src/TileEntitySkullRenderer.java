@@ -12,6 +12,7 @@ public class TileEntitySkullRenderer extends TileEntitySpecialRenderer
     public static TileEntitySkullRenderer skullRenderer;
     private ModelSkeletonHead field_82396_c = new ModelSkeletonHead(0, 0, 64, 32);
     private ModelSkeletonHead field_82395_d = new ModelSkeletonHead(0, 0, 64, 64);
+    private static final String identifier = "This is TileEntitySkullRenderer";
 
     /**
      * Render a skull tile entity.

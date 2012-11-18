@@ -15,6 +15,7 @@ public class EntityOtherPlayerMP extends EntityPlayer
     private double otherPlayerMPZ;
     private double otherPlayerMPYaw;
     private double otherPlayerMPPitch;
+    private static final String identifier = "This is EntityOtherPlayerMP";
 
     public EntityOtherPlayerMP(World par1World, String par2Str)
     {

@@ -13,6 +13,7 @@ public class ImageBufferDownload implements IImageBuffer
     private int[] imageData;
     private int imageWidth;
     private int imageHeight;
+    private static final String identifier = "This is ImageBufferDownload.";
 
     public BufferedImage parseUserSkin(BufferedImage par1BufferedImage)
     {
