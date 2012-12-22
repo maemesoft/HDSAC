@@ -1,8 +1,14 @@
-package net.minecraft.src;
+package net.minecraft.client.renderer.tileentity;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import denoflionsx.HDSkinsAndCloaks.Utils.SkinUtils;
+import net.minecraft.client.model.ModelSkeletonHead;
+import net.minecraft.client.renderer.ImageBufferDownload;
+import net.minecraft.entity.Entity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntitySkull;
+import net.minecraft.util.StringUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
@@ -12,7 +18,6 @@ public class TileEntitySkullRenderer extends TileEntitySpecialRenderer
     public static TileEntitySkullRenderer skullRenderer;
     private ModelSkeletonHead field_82396_c = new ModelSkeletonHead(0, 0, 64, 32);
     private ModelSkeletonHead field_82395_d = new ModelSkeletonHead(0, 0, 64, 64);
-    private static final String identifier = "This is TileEntitySkullRenderer";
 
     /**
      * Render a skull tile entity.
@@ -53,7 +58,7 @@ public class TileEntitySkullRenderer extends TileEntitySpecialRenderer
                 {
                     String var9 = SkinUtils.getSkin(StringUtils.stripControlCodes(par7Str));
 
-                    if (!skullRenderer.tileEntityRenderer.renderEngine.func_82773_c(var9))
+                    if (!skullRenderer.tileEntityRenderer.renderEngine.hasImageData(var9))
                     {
                         skullRenderer.tileEntityRenderer.renderEngine.obtainImageData(var9, new ImageBufferDownload());
                     }

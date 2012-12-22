@@ -1,16 +1,55 @@
-package net.minecraft.src;
+package net.minecraft.client.entity;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import denoflionsx.HDSkinsAndCloaks.Utils.SkinUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiCommandBlock;
+import net.minecraft.client.gui.GuiEnchantment;
+import net.minecraft.client.gui.GuiMerchant;
+import net.minecraft.client.gui.GuiRepair;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.GuiScreenBook;
+import net.minecraft.client.gui.inventory.GuiBeacon;
+import net.minecraft.client.gui.inventory.GuiBrewingStand;
+import net.minecraft.client.gui.inventory.GuiChest;
+import net.minecraft.client.gui.inventory.GuiCrafting;
+import net.minecraft.client.gui.inventory.GuiDispenser;
+import net.minecraft.client.gui.inventory.GuiEditSign;
+import net.minecraft.client.gui.inventory.GuiFurnace;
+import net.minecraft.client.particle.EntityCrit2FX;
+import net.minecraft.client.particle.EntityPickupFX;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.IMerchant;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.stats.Achievement;
+import net.minecraft.stats.AchievementList;
+import net.minecraft.stats.StatBase;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityBeacon;
+import net.minecraft.tileentity.TileEntityBrewingStand;
+import net.minecraft.tileentity.TileEntityCommandBlock;
+import net.minecraft.tileentity.TileEntityDispenser;
+import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.tileentity.TileEntitySign;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.MouseFilter;
+import net.minecraft.util.MovementInput;
+import net.minecraft.util.Session;
+import net.minecraft.util.StringUtils;
+import net.minecraft.world.World;
 
 @SideOnly(Side.CLIENT)
 public class EntityPlayerSP extends EntityPlayer
 {
     public MovementInput movementInput;
     protected Minecraft mc;
-    private static final String identifier = "This is EntityPlayerSP";
 
     /**
      * Used to tell if the player pressed forward twice. If this is at 0 and it's pressed (And they are allowed to
@@ -609,8 +648,8 @@ public class EntityPlayerSP extends EntityPlayer
         return this.inventory.getCurrentItem();
     }
 
-    protected void func_85030_a(String par1Str, float par2, float par3)
+    public void func_85030_a(String par1Str, float par2, float par3)
     {
-        this.worldObj.playSound(this.posX, this.posY - (double)this.yOffset, this.posZ, par1Str, par2, par3);
+        this.worldObj.playSound(this.posX, this.posY - (double)this.yOffset, this.posZ, par1Str, par2, par3, false);
     }
 }

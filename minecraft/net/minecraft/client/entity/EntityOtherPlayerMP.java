@@ -1,9 +1,17 @@
-package net.minecraft.src;
+package net.minecraft.client.entity;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import denoflionsx.HDSkinsAndCloaks.Utils.SkinUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.StringUtils;
+import net.minecraft.world.World;
 
 @SideOnly(Side.CLIENT)
 public class EntityOtherPlayerMP extends EntityPlayer
@@ -15,7 +23,6 @@ public class EntityOtherPlayerMP extends EntityPlayer
     private double otherPlayerMPZ;
     private double otherPlayerMPYaw;
     private double otherPlayerMPPitch;
-    private static final String identifier = "This is EntityOtherPlayerMP";
 
     public EntityOtherPlayerMP(World par1World, String par2Str)
     {

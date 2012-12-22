@@ -25,7 +25,7 @@ public class HDSACCoreMod implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        // This is mostly for debug. I was having some random ClassNotFound problems, but now it seems to have stopped.
+         //This is mostly for debug. I was having some random ClassNotFound problems, but now it seems to have stopped.
         if (!hasRegistered) {
             List<String> asm = Arrays.asList(ASM);
             for (String s : asm) {

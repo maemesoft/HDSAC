@@ -9,7 +9,6 @@ import cpw.mods.fml.common.network.NetworkMod;
 import denoflionsx.HDSkinsAndCloaks.Core.HDSACCore;
 import denoflionsx.HDSkinsAndCloaks.Proxy.Proxy;
 import denoflionsx.HDSkinsAndCloaks.SkinServer.ServerThread;
-import net.minecraft.src.EntityPlayerSP;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.world.WorldEvent;

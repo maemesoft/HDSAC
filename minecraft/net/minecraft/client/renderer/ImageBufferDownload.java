@@ -1,7 +1,7 @@
-package net.minecraft.src;
+package net.minecraft.client.renderer;
 
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
@@ -13,7 +13,6 @@ public class ImageBufferDownload implements IImageBuffer
     private int[] imageData;
     private int imageWidth;
     private int imageHeight;
-    private static final String identifier = "This is ImageBufferDownload.";
 
     public BufferedImage parseUserSkin(BufferedImage par1BufferedImage)
     {

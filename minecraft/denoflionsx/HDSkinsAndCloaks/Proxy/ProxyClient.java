@@ -3,10 +3,10 @@ package denoflionsx.HDSkinsAndCloaks.Proxy;
 import denoflionsx.HDSkinsAndCloaks.HDSAC;
 import java.io.File;
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.EntityOtherPlayerMP;
-import net.minecraft.src.EntityPlayerSP;
-import net.minecraft.src.ImageBufferDownload;
-import net.minecraft.src.TileEntitySkullRenderer;
+import net.minecraft.client.entity.EntityOtherPlayerMP;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.renderer.ImageBufferDownload;
+import net.minecraft.client.renderer.tileentity.TileEntitySkullRenderer;
 
 public class ProxyClient extends Proxy{
 
