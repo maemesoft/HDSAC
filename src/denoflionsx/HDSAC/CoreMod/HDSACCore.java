@@ -4,7 +4,7 @@ import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 import java.io.File;
 import java.util.Map;
 
-@IFMLLoadingPlugin.MCVersion(value = "1.5.1")
+@IFMLLoadingPlugin.MCVersion(value = "1.5.2")
 public class HDSACCore implements IFMLLoadingPlugin {
 
     public static File location;

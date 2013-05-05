@@ -8,8 +8,8 @@ public class ThreadDownloadImageASM implements IClassTransformer {
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] bytes) {
-        if (name.equals("bfw")) {
-            bytes = ClassOverride.Override(name, bytes, "bfw", HDSACCore.location);
+        if (name.equals("bga")) {
+            bytes = ClassOverride.Override(name, bytes, "bga", HDSACCore.location);
         }
         return bytes;
     }

@@ -8,8 +8,8 @@ public class ImageBufferDownloadASM implements IClassTransformer {
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] bytes) {
-        if (name.equals("bgb")) {
-            bytes = ClassOverride.Override(name, bytes, "bgb", HDSACCore.location);
+        if (name.equals("bfv")) {
+            bytes = ClassOverride.Override(name, bytes, "bfv", HDSACCore.location);
         }
         return bytes;
     }

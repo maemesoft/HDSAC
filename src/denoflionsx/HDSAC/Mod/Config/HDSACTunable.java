@@ -10,7 +10,7 @@ public class HDSACTunable {
     @Config
     public static Configuration config = new Configuration(HDSACMod.configLocation);
 
-    @Tunable(category = "Server")
+    @Tunable(category = "server")
     public static class Server {
 
         public static String useInternalServer = String.valueOf(true);
